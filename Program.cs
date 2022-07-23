@@ -9,6 +9,7 @@
 
 string[] mainArray = {"1234", "asd", "qwer", "1264", "asd"};
 
+Console.WriteLine("Main string array:");
 PrintArray(mainArray);
 
 int symbLenghtSize = 3;
@@ -25,4 +26,5 @@ for(int i = 0; i < size; i++)
     }
 }
 
+Console.WriteLine("New string array:");
 PrintArray(newArray);
