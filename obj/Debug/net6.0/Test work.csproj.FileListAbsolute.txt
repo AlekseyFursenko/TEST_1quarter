@@ -1,0 +1,15 @@
+G:\Users\Master\Documents\GeekBrains\Test work\bin\Debug\net6.0\Test work.exe
+G:\Users\Master\Documents\GeekBrains\Test work\bin\Debug\net6.0\Test work.deps.json
+G:\Users\Master\Documents\GeekBrains\Test work\bin\Debug\net6.0\Test work.runtimeconfig.json
+G:\Users\Master\Documents\GeekBrains\Test work\bin\Debug\net6.0\Test work.dll
+G:\Users\Master\Documents\GeekBrains\Test work\bin\Debug\net6.0\Test work.pdb
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\Test work.csproj.AssemblyReference.cache
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\Test work.GeneratedMSBuildEditorConfig.editorconfig
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\Test work.AssemblyInfoInputs.cache
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\Test work.AssemblyInfo.cs
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\Test work.csproj.CoreCompileInputs.cache
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\Test work.dll
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\refint\Test work.dll
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\Test work.pdb
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\Test work.genruntimeconfig.cache
+G:\Users\Master\Documents\GeekBrains\Test work\obj\Debug\net6.0\ref\Test work.dll
