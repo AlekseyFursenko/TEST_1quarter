@@ -12,44 +12,47 @@ string[] ArrayInput()
     Console.WriteLine("Please choose the method of the main string array creation" + "\n" +
                     "1 - manualy" + "\n" +
                     "2 - from Input.txt file");
-    int method = Convert.ToInt32(Console.ReadLine());
+    string method = Console.ReadLine();
     
-    if(method == 1)
+    if(method == "1") // Manual method of array input
     {
         Console.WriteLine("Please input the size of your string array");
         int size = Convert.ToInt32(Console.ReadLine());
-        string [] array = new string[size];
+        string [] array1 = new string[size];
 
         for(int i = 0; i < size; i++)
         {
-            Console.Write("Please input " + (i + 1) + "element of the string array: ");
-            array[i] = Console.ReadLine();
+            Console.Write("Please input " + (i + 1) + " element of the string array: ");
+            array1[i] = Console.ReadLine();
         }
 
-        return array;
-    }
-    if(method == 2)
-    {
-        Console.WriteLine("Please input the size of your string array")
+        return array1;
     }
 
-    return array;
+    if(method == "2") // Download array data from Input.txt file!!! Is is necessary that in file one line consist one element only
+    {
+        Console.WriteLine("Your string array has been created from Input.txt file.");
+        string[] array2 = File.ReadAllLines("Input.txt");
+        
+        return array2;
+    }
+
+    string[] array3 = {};
+    return array3;
 }
 
-// Main array create
 Console.Clear();
-
-
 
 string[] mainArray = ArrayInput();
 
 Console.WriteLine("Main string array:");
 PrintArray(mainArray);
 
-int symbLenghtSize = 3;
+int symbLenghtSize = 3;// Lenght limit limitation for elemrnts of newArray
+
 int size = mainArray.Length;
 
-File.WriteAllText("Temp.txt",String.Empty); // Clear the txt file for new temporary records
+File.WriteAllText("Temp.txt",String.Empty); // Clear the Temp.txt file for new temporary records
 
 for(int i = 0; i < size; i++)
 {
@@ -62,5 +65,4 @@ for(int i = 0; i < size; i++)
 string[] newArray = File.ReadAllLines("Temp.txt");
 
 Console.WriteLine("New string array:");
-
 PrintArray(newArray);
