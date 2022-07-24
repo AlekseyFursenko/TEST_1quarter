@@ -18,8 +18,6 @@ int count = 0; // Count of elements in the mainArray with lenght less or iqual s
 
 File.WriteAllText("Temp.txt",String.Empty); // Clear the txt file for new temporary records
 
-string[] newArray = new string[size];
-
 for(int i = 0; i < size; i++)
 {
     if(mainArray[i].Length <= symbLenghtSize)
@@ -29,5 +27,8 @@ for(int i = 0; i < size; i++)
     }
 }
 
+string[] newArray = File.ReadAllLines("Temp.txt");
+
 Console.WriteLine("New string array:");
-Console.WriteLine(File.ReadAllText("Temp.txt"));
+
+PrintArray(newArray);
