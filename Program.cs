@@ -7,7 +7,7 @@
     Console.WriteLine();
 }
 
-string[] mainArray = {"1234", "asd", "qwer", "1264", "asd"};
+string[] mainArray = {"1234", "asd", "qwer", "1264", "^)", ":-)"};
 
 Console.WriteLine("Main string array:");
 PrintArray(mainArray);
@@ -15,16 +15,19 @@ PrintArray(mainArray);
 int symbLenghtSize = 3;
 int size = mainArray.Length;
 int count = 0; // Count of elements in the mainArray with lenght less or iqual symbLenghtSize
+
+File.WriteAllText("Temp.txt",String.Empty); // Clear the txt file for new temporary records
+
 string[] newArray = new string[size];
 
 for(int i = 0; i < size; i++)
 {
     if(mainArray[i].Length <= symbLenghtSize)
     {
-        newArray[count] = mainArray[i];
+        File.AppendAllText("Temp.txt", mainArray[i] + Environment.NewLine);
         count++;
     }
 }
 
 Console.WriteLine("New string array:");
-PrintArray(newArray);
+Console.WriteLine(File.ReadAllText("Temp.txt"));
