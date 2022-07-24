@@ -41,28 +41,33 @@ string[] ArrayInput()
     return array3;
 }
 
+string[] FilteredArray(string[] array, int symbLenght)
+{
+    int size = array.Length;
+
+    File.WriteAllText("Temp.txt",String.Empty); // Clear the Temp.txt file for new temporary records
+
+    for(int i = 0; i < size; i++)
+    {
+        if(array[i].Length <= symbLenght)
+        {
+            File.AppendAllText("Temp.txt", array[i] + Environment.NewLine);
+        }
+    }
+
+    string[] newArray = File.ReadAllLines("Temp.txt");
+
+    return newArray;
+} 
+
 Console.Clear();
 
 string[] mainArray = ArrayInput();
+int symbLenghtSize = 3;// Lenght limit limitation for elemrnts of newArray
+
+string[] newArray = FilteredArray(mainArray, symbLenghtSize);
 
 Console.WriteLine("Main string array:");
 PrintArray(mainArray);
-
-int symbLenghtSize = 3;// Lenght limit limitation for elemrnts of newArray
-
-int size = mainArray.Length;
-
-File.WriteAllText("Temp.txt",String.Empty); // Clear the Temp.txt file for new temporary records
-
-for(int i = 0; i < size; i++)
-{
-    if(mainArray[i].Length <= symbLenghtSize)
-    {
-        File.AppendAllText("Temp.txt", mainArray[i] + Environment.NewLine);
-    }
-}
-
-string[] newArray = File.ReadAllLines("Temp.txt");
-
 Console.WriteLine("New string array:");
 PrintArray(newArray);
