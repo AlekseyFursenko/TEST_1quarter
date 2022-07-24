@@ -63,7 +63,7 @@ string[] FilteredArray(string[] array, int symbLenght)
 Console.Clear();
 
 string[] mainArray = ArrayInput();
-int symbLenghtSize = 3;// Lenght limit limitation for elemrnts of newArray
+int symbLenghtSize = 3;// Lenght limitation for elements of newArray
 
 string[] newArray = FilteredArray(mainArray, symbLenghtSize);
 
